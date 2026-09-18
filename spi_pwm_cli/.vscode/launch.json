@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "spi_pwm_cli_silabs_debug:default_config",
+            "cwd": "${workspaceFolder}",
+            "type": "cortex-debug",
+            "request": "launch",
+            "serverpath": "C:/Users/gknight/.silabs/slt/installs/archive/exx32-v6.0.32/JLinkGDBServerCL.exe",
+            "servertype": "jlink",
+            "gdbPath": "C:/Users/gknight/.silabs/slt/installs/archive/exx32-v6.0.32/arm-none-eabi-gdb.exe",
+            "device": "EFR32MG26BxxxF3200",
+            "svdFile": "C:\\Users\\gknight\\AppData\\Local\\Temp\\silabs_extension\\silabs_extension\\svd\\EFR32MG26B420F3200IM68.svd",
+            "runToEntryPoint": "main",
+            "rtos": "FreeRTOS",
+            "showDevDebugOutput": "raw",
+            "executable": "c:/Git/LiBattShade/WS_LiBattShade/spi_pwm_cli/cmake_gcc/build/base/spi_pwm_cli.out",
+            "preLaunchTask": "spi_pwm_cli_silabs_debug:default_config_combined",
+            "serialNumber": "440279239",
+            "overrideLaunchCommands": [
+                "exec-file c:/Git/LiBattShade/WS_LiBattShade/spi_pwm_cli/cmake_gcc/build/base/spi_pwm_cli.out",
+                "symbol-file c:/Git/LiBattShade/WS_LiBattShade/spi_pwm_cli/cmake_gcc/build/base/spi_pwm_cli.out"
+            ],
+            "overrideResetCommands": [
+                "monitor reset",
+                "set $pc = __Vectors[1]",
+                "set $sp = __Vectors[0]"
+            ]
+        }
+    ]
+}

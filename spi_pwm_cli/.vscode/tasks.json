@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "spi_pwm_cli_silabs_debug:default_config_setup",
+            "type": "shell",
+            "command": "C:/Users/gknight/.silabs/slt/installs/conan/p/cmakefa35ab0687064/p/bin/cmake.exe --preset project",
+            "options": {
+                "cwd": "c:/Git/LiBattShade/WS_LiBattShade/spi_pwm_cli/cmake_gcc"
+            }
+        },
+        {
+            "label": "spi_pwm_cli_silabs_debug:default_config_build",
+            "type": "shell",
+            "command": "C:/Users/gknight/.silabs/slt/installs/conan/p/cmakefa35ab0687064/p/bin/cmake.exe --build --preset default_config",
+            "options": {
+                "cwd": "c:/Git/LiBattShade/WS_LiBattShade/spi_pwm_cli/cmake_gcc"
+            }
+        },
+        {
+            "label": "spi_pwm_cli_silabs_debug:default_config_flash",
+            "type": "shell",
+            "command": "C:/Users/gknight/.silabs/slt/installs/archive/Simplicity Commander/commander.exe",
+            "args": [
+                "flash",
+                "c:/Git/LiBattShade/WS_LiBattShade/spi_pwm_cli/cmake_gcc/build/base/spi_pwm_cli.hex",
+                "--halt",
+                "--serialno",
+                "440279239",
+                "--device",
+                "EFR32MG26B420F3200IM68"
+            ]
+        },
+        {
+            "label": "spi_pwm_cli_silabs_debug:default_config_combined",
+            "dependsOrder": "sequence",
+            "presentation": {
+                "reveal": "never"
+            },
+            "dependsOn": [
+                "spi_pwm_cli_silabs_debug:default_config_setup",
+                "spi_pwm_cli_silabs_debug:default_config_build",
+                "spi_pwm_cli_silabs_debug:default_config_flash"
+            ]
+        }
+    ]
+}
