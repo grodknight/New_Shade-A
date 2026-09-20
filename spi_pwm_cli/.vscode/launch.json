@@ -13,12 +13,12 @@
             "runToEntryPoint": "main",
             "rtos": "FreeRTOS",
             "showDevDebugOutput": "raw",
-            "executable": "c:/Git/LiBattShade/WS_LiBattShade/spi_pwm_cli/cmake_gcc/build/base/spi_pwm_cli.out",
+            "executable": "c:/Git/LiBattShade-removed-git/WS_LiBattShade/spi_pwm_cli/cmake_gcc/build/base/spi_pwm_cli.out",
             "preLaunchTask": "spi_pwm_cli_silabs_debug:default_config_combined",
             "serialNumber": "440279239",
             "overrideLaunchCommands": [
-                "exec-file c:/Git/LiBattShade/WS_LiBattShade/spi_pwm_cli/cmake_gcc/build/base/spi_pwm_cli.out",
-                "symbol-file c:/Git/LiBattShade/WS_LiBattShade/spi_pwm_cli/cmake_gcc/build/base/spi_pwm_cli.out"
+                "exec-file c:/Git/LiBattShade-removed-git/WS_LiBattShade/spi_pwm_cli/cmake_gcc/build/base/spi_pwm_cli.out",
+                "symbol-file c:/Git/LiBattShade-removed-git/WS_LiBattShade/spi_pwm_cli/cmake_gcc/build/base/spi_pwm_cli.out"
             ],
             "overrideResetCommands": [
                 "monitor reset",

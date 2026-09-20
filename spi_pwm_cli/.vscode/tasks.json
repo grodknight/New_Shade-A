@@ -6,7 +6,7 @@
             "type": "shell",
             "command": "C:/Users/gknight/.silabs/slt/installs/conan/p/cmakefa35ab0687064/p/bin/cmake.exe --preset project",
             "options": {
-                "cwd": "c:/Git/LiBattShade/WS_LiBattShade/spi_pwm_cli/cmake_gcc"
+                "cwd": "c:/Git/LiBattShade-removed-git/WS_LiBattShade/spi_pwm_cli/cmake_gcc"
             }
         },
         {
@@ -14,7 +14,7 @@
             "type": "shell",
             "command": "C:/Users/gknight/.silabs/slt/installs/conan/p/cmakefa35ab0687064/p/bin/cmake.exe --build --preset default_config",
             "options": {
-                "cwd": "c:/Git/LiBattShade/WS_LiBattShade/spi_pwm_cli/cmake_gcc"
+                "cwd": "c:/Git/LiBattShade-removed-git/WS_LiBattShade/spi_pwm_cli/cmake_gcc"
             }
         },
         {
@@ -23,7 +23,7 @@
             "command": "C:/Users/gknight/.silabs/slt/installs/archive/Simplicity Commander/commander.exe",
             "args": [
                 "flash",
-                "c:/Git/LiBattShade/WS_LiBattShade/spi_pwm_cli/cmake_gcc/build/base/spi_pwm_cli.hex",
+                "c:/Git/LiBattShade-removed-git/WS_LiBattShade/spi_pwm_cli/cmake_gcc/build/base/spi_pwm_cli.hex",
                 "--halt",
                 "--serialno",
                 "440279239",
