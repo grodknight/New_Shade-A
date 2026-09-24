@@ -57,7 +57,7 @@ void led_cmd(sl_cli_command_arg_t *arguments);
 #pragma region Constants
 
 const char verString[] =
-  "MCT8316Z DVT Version 1.0.4 "
+  "MCT8316Z DVT Version 1.0.5 "
   "Build number: " BUILD_NUMBER " "
   "Build: " __DATE__ " " __TIME__ "\r\n";
 

@@ -45,6 +45,29 @@ static bool parityCheck_read(uint8_t addr);
 volatile unsigned char dataMSB, dataLSB;
 volatile uint16_t frame = 0;
 
+uint8_t  mct8316z_ctl_reg_set[] = {  // from Dan 9/23/26
+0x03,  // MCT_REG_CTRL1
+0x32,  // MCT_REG_CTRL2
+0x42,  // MCT_REG_CTRL3
+0x90,  // MCT_REG_CTRL4
+0x38,  // MCT_REG_CTRL5
+0x00,  // MCT_REG_CTRL6
+0x10,  // MCT_REG_CTRL7
+0x00,  // MCT_REG_CTRL8
+0x00,  // MCT_REG_CTRL9
+0x00,  // MCT_REG_CTRL10
+ };
+
+
+void write_ctl_reg_set(void)
+{
+  uint8_t reg;
+  for(reg=0; reg < CONTROL_REGISTER_COUNT; reg++)
+  {
+    mct8316z_write_reg(reg+MCT_REG_CTRL1, mct8316z_ctl_reg_set[reg]);
+  }
+}
+
 #if 0
 const ALL_MCT_CTL_REGS all_mct_ctl_regs_1 = {
 		
@@ -243,10 +266,14 @@ bool mct8316z_init(SPIDRV_Callback_t callback)
    mct8316z_disableSleep();
    mct8316z_UnlockRegs();
   
+   write_ctl_reg_set();  // write default values to all control registers
+
+   #if 0
    // SDO Push/Pull, PWM Sync/Digital
    mct8316z_write_reg( MCT_REG_CTRL2,  0x26); 
    // 20 KHz, 32V
    mct8316z_write_reg( MCT_REG_CTRL3,  0x42); 
+#endif
 
    MCT8316_ReadAllRegs();
 
